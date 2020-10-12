@@ -1,0 +1,71 @@
+.intro {
+  height: calc(100vh - 63px);
+  background: url('../img/intro.jpg') center no-repeat;
+  background-color: var(--color-gray);
+  background-size: cover;
+  transition: height 0.3s ease 0s;
+
+  @media (max-width: 1412px) {
+    height: 650px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0 9%;
+  }
+
+  &__title {
+    max-width: 481px;
+    margin-bottom: 12px;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 60px;
+    color: var(--color-white);
+    text-align: right;
+    text-shadow: 1px 1px 1px rgb(50, 50, 50);
+  }
+
+  &__title-mercury {
+    color: var(--color-mercury);
+  }
+
+  &__title-alabaster {
+    color: var(--color-alabaster);
+  }
+
+  &__title-blue {
+    color: var(--color-dodger-blue);
+  }
+
+  &__button-left {
+    padding: 0 35px;
+    margin-right: 17px;
+    margin-left: 118px;
+    line-height: 60px;
+    background-color: var(--color-alabaster);
+
+    @media (min-width: $md) {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-picton-blue);
+      }
+    }
+  }
+
+  &__button-right {
+    padding: 0 35px;
+    line-height: 60px;
+    color: var(--color-white);
+    background-color: var(--color-tundora);
+
+    @media (min-width: $md) {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-picton-blue);
+      }
+    }
+  }
+}

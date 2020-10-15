@@ -20,9 +20,9 @@
   &__title {
     max-width: 481px;
     margin-bottom: 12px;
-    font-size: 48px;
+    font-size: 3.43rem;
     font-weight: 800;
-    line-height: 60px;
+    line-height: 4.28rem;
     color: var(--color-white);
     text-align: right;
     text-shadow: 1px 1px 1px rgb(50, 50, 50);
@@ -40,31 +40,35 @@
     color: var(--color-dodger-blue);
   }
 
+  button {
+    font-family: 'OpenSans', sans-serif;
+  }
+
   &__button-left {
     padding: 0 35px;
     margin-right: 17px;
     margin-left: 118px;
-    line-height: 60px;
+    line-height: 4.28rem;
     background-color: var(--color-alabaster);
 
     @media (min-width: $md) {
       &:hover {
         color: var(--color-white);
-        background-color: var(--color-picton-blue);
+        background-color: var(--color-dodger-blue);
       }
     }
   }
 
   &__button-right {
     padding: 0 35px;
-    line-height: 60px;
+    line-height: 4.28rem;
     color: var(--color-white);
     background-color: var(--color-tundora);
 
     @media (min-width: $md) {
       &:hover {
         color: var(--color-white);
-        background-color: var(--color-picton-blue);
+        background-color: var(--color-dodger-blue);
       }
     }
   }

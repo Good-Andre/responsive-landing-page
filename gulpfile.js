@@ -180,9 +180,6 @@ const styles = () => {
     .pipe(autoprefixer({
       cascade: false,
     }))
-    .pipe(cleanCSS({
-      level: 2
-    }))
     .pipe(rename({
       suffix: '.min'
     }))

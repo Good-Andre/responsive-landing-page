@@ -31,6 +31,7 @@
   &__list {
     display: flex;
     gap: 36px;
+    transition: gap 0.3s ease 0s;
 
     @media (max-width: $lg) {
       gap: 22px;

@@ -28,7 +28,8 @@ input::-ms-clear {
 }
 
 a {
-  color: var(--color-gray);
+  color: var(--color-dove-gray);
+  transition: all 0.2s ease 0s;
 }
 
 a,
@@ -51,6 +52,7 @@ ul {
 
 img {
   max-width: 100%;
+  vertical-align: top;
 }
 
 .fa {
@@ -105,6 +107,7 @@ body {
 }
 
 ._blue-title {
+  margin-left: 15px;
   font-family: "NotoSans", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -130,7 +133,7 @@ body {
     width: 50px;
     height: 3px;
     content: "";
-    box-shadow: 1px 1px 2px rgb(213, 213, 213);
+    box-shadow: 1px 1px 2px rgb(190, 190, 190);
     transition: background-color 0.3s ease 0s;
   }
 }
@@ -146,7 +149,7 @@ body {
   }
 }
 
-._line-bl-2 {
+._line-bl-1 {
   &::after {
     top: 38px;
     background-color: var(--color-dodger-blue);
@@ -160,7 +163,7 @@ body {
   }
 }
 
-._line-bl-3 {
+._line-bl-2 {
   &::after {
     top: 28px;
     background-color: var(--color-dodger-blue);
@@ -168,7 +171,11 @@ body {
   }
 }
 
-._cntr {
+._cntr-1 {
+  text-align: center;
+}
+
+._cntr_2 {
   @media (max-width: $md) {
     text-align: center;
   }

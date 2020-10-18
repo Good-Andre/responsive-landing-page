@@ -2,6 +2,10 @@
   &__container {
     padding-top: 118px;
     padding-bottom: 75px;
+
+    @media (max-width: $md) {
+      padding-top: 65px;
+    }
   }
   // slider $md
   &__list {
@@ -35,7 +39,7 @@
     text-align: center;
     background-color: var(--color-tundora);
     border-radius: 100%;
-    transition: all 0.2s ease 0s;
+    transition: background-color 0.2s ease 0s;
 
     @media (max-width: $md) {
       background-color: var(--color-dodger-blue);
@@ -48,6 +52,10 @@
     padding-bottom: 22px;
 
     @media (min-width: $md) {
+      &:hover a {
+        color: var(--color-tundora);
+      }
+
       &:hover ~ .article-about__icon-inner .article-about__icon {
         background-color: var(--color-dodger-blue);
       }
@@ -62,6 +70,5 @@
 .about__item {
   width: 370px;
   padding: 50px 32px 22px;
-  // margin-bottom: 4px;
   background-color: var(--color-wild-sand);
 }

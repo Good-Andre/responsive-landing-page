@@ -63,10 +63,13 @@ const resources = () => {
 }
 
 const imgToApp = () => {
-  return src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,svg,gif,ico,webp,tiff}'])
+  return src (['./src/img/webp/**.{svg,jpg,JPG,jpeg,png,gif,ico,webp,tiff}'])
+  .pipe(webp())
+  .pipe(dest('./app/img/webp'))
+  .pipe(src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}']))
     .pipe(dest('./app/img'))
     .pipe(browserSync.stream());
-}
+};
 
 const htmlInclude = () => {
   return src(['./src/*.html'])

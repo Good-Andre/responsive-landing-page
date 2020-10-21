@@ -55,8 +55,14 @@ img {
   vertical-align: top;
 }
 
+button:active,
+button:focus {
+  outline: none;
+}
+
 .fa {
   color: var(--color-white);
+  transition: all 0.2s ease 0s;
 }
 
 body {
@@ -87,7 +93,7 @@ body {
 }
 
 ._mid-font {
-  font-family: "NotoSans", sans-serif;
+  font-family: 'NotoSans', sans-serif;
   font-size: 1.28rem;
   font-weight: 700;
   color: var(--color-dove-gray);
@@ -108,7 +114,7 @@ body {
 
 ._blue-title {
   margin-left: 15px;
-  font-family: "NotoSans", sans-serif;
+  font-family: 'NotoSans', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 60px;
@@ -132,7 +138,7 @@ body {
     right: -10px;
     width: 50px;
     height: 3px;
-    content: "";
+    content: '';
     box-shadow: 1px 1px 2px rgb(190, 190, 190);
     transition: background-color 0.3s ease 0s;
   }
@@ -171,12 +177,31 @@ body {
   }
 }
 
-._cntr-1 {
+._cntr {
   text-align: center;
 }
 
-._cntr_2 {
+._cntr-md {
   @media (max-width: $md) {
     text-align: center;
   }
+}
+
+.fa-angle-left {
+  padding-right: 3px;
+}
+
+.fa-angle-right {
+  padding-left: 3px;
+}
+
+.noscript-info {
+  z-index: 100;
+  width: 100%;
+  padding: 25px;
+  font-size: 2rem;
+  line-height: 2.57rem;
+  color: var(--color-black);
+  text-align: center;
+  background-color: #fff;
 }

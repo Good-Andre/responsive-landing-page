@@ -600,7 +600,7 @@ body {
   box-shadow: 1px 1px 2px #282828;
 }
 
-._cntr {
+._cntr-title {
   text-align: center;
 }
 
@@ -1214,6 +1214,159 @@ body {
   margin-left: 19px;
 }
 
+.best {
+  background-image: url("../img/best-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.best__container {
+  display: flex;
+}
+
+.best__left {
+  flex: 1 1 auto;
+}
+
+.best__right {
+  flex: 1 1 auto;
+  max-width: 960px;
+}
+
+.best-right {
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+.best-right__inner {
+  max-width: 610px;
+  padding: 36px 40px 22px 40px;
+}
+
+.best-right__title {
+  margin-bottom: 32px;
+  font-family: "NotoSans", sans-serif;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.best-right__text {
+  margin-bottom: 42px;
+}
+
+.best-right__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.item-right {
+  width: 237px;
+  margin: 0 auto;
+}
+
+.item-right__icon {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.item-right__title {
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 15px;
+  font-size: inherit;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.item-right__text {
+  margin-bottom: 11px;
+}
+
+.price__container {
+  padding-top: 65px;
+  padding-bottom: 95px;
+}
+
+.price__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 63px;
+}
+
+.price__item {
+  background-color: #e2a4bf;
+}
+
+.article-price {
+  position: relative;
+  width: 270px;
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.article-price__title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-family: 'NotoSans', sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  color: var(--color-white);
+  text-shadow: 1px 1px 1px #7c7c7c;
+  background-color: var(--color-mercury);
+  transition: all 0.2s ease 0s;
+}
+
+.article-price__title--2 {
+  text-shadow: 1px 1px 2px #646464;
+  background-color: var(--color-silver-chalice);
+}
+
+.article-price__title--3 {
+  text-shadow: 1px 1px 2px #646464;
+  background-color: var(--color-gray);
+}
+
+.article-price__title--4 {
+  text-shadow: 1px 1px 2px #323232;
+  background-color: var(--color-dove-gray);
+}
+
+.article-price__item {
+  line-height: 40px;
+  background-color: var(--color-alabaster);
+}
+
+.article-price__item:first-child {
+  line-height: 70px;
+}
+
+.article-price__item:nth-child(2n) {
+  background-color: var(--color-wild-sand);
+}
+
+.article-price__item span {
+  padding-left: 5px;
+  font-family: 'NotoSans', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.article-price__button {
+  display: block;
+  width: 100%;
+  font-family: 'NotoSans', sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  text-transform: inherit;
+  background-color: var(--color-mercury);
+}
+
 @media (min-width: 768px) {
   .intro__button-left:hover {
     color: var(--color-white);
@@ -1263,6 +1416,12 @@ body {
     max-width: 481px;
     font-size: 3.43rem;
     line-height: 4.28rem;
+  }
+}
+
+@media (max-width: 1227px) {
+  .price__container {
+    max-width: 768px;
   }
 }
 
@@ -1402,6 +1561,34 @@ body {
   .team-article__status-inner::after {
     display: none;
   }
+
+  .best__left {
+    flex: 0 0 auto;
+  }
+
+  .best-right__inner {
+    margin: 0 auto;
+  }
+
+  .item-right {
+    text-align: center;
+  }
+
+  .article-price__title--1 {
+    color: var(--color-dove-gray);
+    text-shadow: none;
+    background-color: var(--color-mercury);
+  }
+
+  .article-price__title--4 {
+    color: var(--color-white);
+    background-color: var(--color-dove-gray);
+  }
+
+  .article-price__button {
+    color: var(--color-white);
+    background-color: #65ceff;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1463,6 +1650,17 @@ body {
 
   .team-article__status-inner:hover::after {
     display: none;
+  }
+
+  .article-price__button:hover {
+    color: var(--color-white);
+    background-color: var(--color-dodger-blue);
+  }
+
+  .article-price__button:hover ~ .article-price__title {
+    color: var(--color-dodger-blue);
+    text-shadow: none;
+    background-color: var(--color-mercury);
   }
 }
 /*# sourceMappingURL=main.min.css.map */

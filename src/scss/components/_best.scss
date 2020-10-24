@@ -1,0 +1,80 @@
+.best {
+  background-image: url('../img/best-bg.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+  }
+
+  &__left {
+    flex: 1 1 auto;
+
+    @media (max-width: $md) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__right {
+    flex: 1 1 auto;
+    max-width: 960px;
+  }
+}
+
+.best-right {
+  background-color: rgba(0, 0, 0, 0.72);
+
+  &__inner {
+    max-width: 610px;
+    padding: 36px 40px 22px 40px;
+
+    @media (max-width: $md) {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: "NotoSans", sans-serif;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  &__text {
+    margin-bottom: 42px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+}
+
+.item-right {
+  width: 237px;
+  margin: 0 auto;
+
+  @media (max-width: $md) {
+    text-align: center;
+  }
+
+  &__icon {
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+    font-size: inherit;
+    color: var(--color-white);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 11px;
+  }
+}

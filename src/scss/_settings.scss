@@ -177,7 +177,7 @@ body {
   }
 }
 
-._cntr {
+._cntr-title {
   text-align: center;
 }
 
@@ -194,6 +194,89 @@ body {
 .fa-angle-right {
   padding-left: 3px;
 }
+
+// ._sm-logo {
+//   position: relative;
+
+//   &::before {
+//     position: absolute;
+//     content: '';
+//   }
+// }
+
+// .wrapper {
+// position: relative;
+// display: flex;
+// flex-direction: column;
+// width: 100%;
+// min-height: 100vh;
+// overflow: hidden;
+// }
+
+// img {
+//   max-width: 100%;
+// }
+
+// .is-outer {
+//   position: relative !important; // stylelint-disable-line declaration-no-important
+//   left: -9999px !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .site-container {
+//   overflow: hidden;
+// }
+
+// .stop-scroll {
+//   @include stop-scroll;
+// }
+
+// .is-hidden {
+//   display: none !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .for-mobile {
+//   display: none;
+
+//   @include mobile {
+//     display: block;
+//   }
+// }
+
+// .error {
+//   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .js-focus-visible :focus:not(.focus-visible) {
+//   outline: none;
+// }
+// ---------------
+// CUSTOM COMPONENTS STYLES
+// .burger {
+//   --burger-width: 40px;
+//   --burger-height: 20px;
+//   --burger-line-height: 2px;
+
+//   @include burger;
+// }
+// ---------------------
+
+// html{
+//   scroll-behavior: smooth;
+//   // height: 100%;
+// }
+
+// html{
+//   height: 100%;
+//   width: 100%;
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   // width: 100%;
+//   position: relative;
+// }
 
 .noscript-info {
   z-index: 100;

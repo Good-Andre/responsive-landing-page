@@ -1,0 +1,136 @@
+.price {
+  &__container {
+    padding-top: 65px;
+    padding-bottom: 95px;
+
+    @media (max-width: $xl + 45px) {
+      max-width: $md;
+    }
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 63px;
+
+    @media (max-width: $xl) {
+      // flex-direction: column;
+      // gap: 30px;
+    }
+  }
+
+  &__item {
+    background-color: #e2a4bf;
+  }
+}
+
+.article-price {
+  position: relative;
+  width: 270px;
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-family: 'NotoSans', sans-serif;
+    font-size: 18px;
+    line-height: 50px;
+    color: var(--color-white);
+    text-shadow: 1px 1px 1px rgb(124, 124, 124);
+    background-color: var(--color-mercury);
+    transition: all 0.2s ease 0s;
+
+    &--1 {
+      @media (max-width: $md) {
+        color: var(--color-dove-gray);
+        text-shadow: none;
+        background-color: var(--color-mercury);
+      }
+    }
+
+    &--2 {
+      text-shadow: 1px 1px 2px rgb(100, 100, 100);
+      background-color: var(--color-silver-chalice);
+    }
+
+    &--3 {
+      text-shadow: 1px 1px 2px rgb(100, 100, 100);
+      background-color: var(--color-gray);
+    }
+
+    &--4 {
+      text-shadow: 1px 1px 2px rgb(50, 50, 50);
+      background-color: var(--color-dove-gray);
+
+      @media (max-width: $md) {
+        color: var(--color-white);
+        background-color: var(--color-dove-gray);
+      }
+    }
+  }
+
+  &__item {
+    line-height: 40px;
+    background-color: var(--color-alabaster);
+
+    &:first-child {
+      line-height: 70px;
+    }
+
+    &:nth-child(2n) {
+      background-color: var(--color-wild-sand);
+    }
+
+    span {
+      padding-left: 5px;
+      font-family: 'NotoSans', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    font-family: 'NotoSans', sans-serif;
+    font-size: 18px;
+    line-height: 50px;
+    text-transform: inherit;
+    background-color: var(--color-mercury);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-dodger-blue);
+      }
+
+      &:hover ~ .article-price__title {
+        color: var(--color-dodger-blue);
+        text-shadow: none;
+        background-color: var(--color-mercury);
+      }
+    }
+
+    @media (max-width: $md) {
+      color: var(--color-white);
+      background-color: #65ceff;
+    }
+
+    // @media (hover: hover) {
+    //   &:hover h3 {
+    //     color: var(--color-dodger-blue);
+    //     text-shadow: none;
+    //     background-color: var(--color-mercury);
+    //   }
+    // }
+  }
+}

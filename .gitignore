@@ -2,3 +2,4 @@ app/debug.log
 node_modules
 .stylelintrc.json
 yarn.lock
+yarn-error.log

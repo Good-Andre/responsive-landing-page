@@ -1,0 +1,141 @@
+.blog {
+  &__container {
+    padding-top: 63px;
+    padding-bottom: 40px;
+
+    @media (max-width: $md) {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: $sm) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    margin-top: 40px;
+
+    @media (max-width: $sm) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__arrows {
+    position: relative;
+  }
+
+  &__button {
+    width: 35px;
+    height: 35px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    background-color: var(--color-tundora);
+    border-radius: 100%;
+
+    @media (hover: hover) {
+      &:hover .fa {
+        color: var(--color-dodger-blue);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    height: 35px;
+    padding: 0 30px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 35px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    background-color: var(--color-tundora);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-dodger-blue);
+      }
+    }
+  }
+}
+
+.blog-slider {
+  margin-top: 63px;
+  margin-bottom: 39px;
+  overflow: hidden;
+
+  @media (max-width: $md) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 629px) {
+    max-width: 402px;
+    margin: 40px auto 39px;
+  }
+}
+
+.blog-slide {
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: 11px 20px;
+    font-size: 14px;
+    color: var(--color-dove-gray);
+    text-transform: uppercase;
+    background-color: var(--color-wild-sand);
+  }
+
+  &__text {
+    flex: 1 1 auto; //
+    padding: 9px 20px 12px;
+    background-color: var(--color-alabaster);
+  }
+
+  &__bottom {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    background-color: var(--color-wild-sand);
+  }
+
+  &__descr {
+    padding-top: 2px;
+  }
+
+  &__link {
+    span {
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-dodger-blue);
+      }
+    }
+
+    @media (max-width: $md) {
+      color: var(--color-dodger-blue);
+    }
+  }
+}

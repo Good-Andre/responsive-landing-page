@@ -1,0 +1,265 @@
+.testi {
+  background: linear-gradient(
+    0deg,
+    rgb(244, 244, 244) 0,
+    rgb(255, 255, 255) 100%
+  );
+
+  @media (max-width: $sm) {
+    background: none;
+  }
+
+  &__container {
+    display: flex;
+    gap: 7px;
+    justify-content: space-between;
+    padding-top: 81px;
+
+    @media (max-width: $md) {
+      flex-direction: column-reverse;
+      padding-top: 25px;
+    }
+
+    @media (max-width: $sm) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    max-width: 733px; //tmp
+    overflow: hidden;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: 620px) {
+      height: 100%;
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+
+    @media (max-width: 620px) {
+      top: 40%;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+.testi-slide {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $md) {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 236px;
+    max-width: 291px;
+    max-height: 423px;
+
+    @media (max-width: 450px) {
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+.slide-left {
+  &__speech {
+    position: relative;
+    max-width: 428px; //tmp
+    max-height: 276px;
+    padding: 45px 30px 30px;
+    margin-top: 47px;
+    background-color: #fff;
+
+    @media (max-width: 450px) {
+      // color: var(--color-tundora);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 620px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      max-width: 600px;
+      max-height: 200px;
+      padding-right: 40px;
+      padding-left: 40px;
+      color: var(--color-tundora);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (min-width: $md) {
+      &::after {
+        position: absolute;
+        right: -27px;
+        bottom: -20px;
+        width: 48px;
+        height: 42px;
+        content: url('../img/speek-line.svg');
+      }
+    }
+
+    blockquote {
+      max-height: 170px;
+      overflow: hidden;
+    }
+  }
+
+  &__speech-quote {
+    position: absolute;
+    top: -28px;
+    left: 30px;
+    width: 67px;
+    height: 57px;
+    font-size: 72px;
+    // background-color: #fff;
+
+    @media (max-width: $sm) {
+      left: 45px;
+    }
+
+    .fa {
+      color: var(--color-dodger-blue);
+
+      @media (max-width: $sm) {
+        font-size: 55px;
+      }
+    }
+  }
+}
+
+.left-info {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 26px;
+  color: var(--color-dove-gray);
+  text-align: right;
+
+  @media (max-width: 620px) {
+    position: absolute;
+    left: 10%;
+    z-index: 10;
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    color: var(--color-tundora);
+  }
+
+  &__author {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__status {
+    font-size: 12px;
+  }
+
+  &__company {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.testi__button {
+  // position: relative; //
+  // z-index: 10; //
+  width: 35px;
+  height: 35px;
+  padding-bottom: 4px;
+  margin-bottom: 39px;
+  font-size: 24px;
+  background-color: var(--color-tundora);
+  border-radius: 100%;
+
+  @media (hover: hover) {
+    &:hover .fa {
+      color: var(--color-dodger-blue);
+    }
+  }
+
+  @media (max-width: 620px) {
+    background-color: rgba(255, 255, 255, 0.6);
+
+    .fa {
+      color: var(--color-dodger-blue);
+    }
+  }
+}
+
+.testi-pag {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+
+  @media (max-width: 620px) {
+    gap: 15px;
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    box-sizing: content-box;
+    width: 135px;
+    height: 135px;
+    overflow: hidden;
+    background-color: var(--color-white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 8px solid #fff;
+    opacity: 1;
+    transition: all 0.2s ease 0s;
+
+    @media (max-width: 620px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    &:nth-child(1) {
+      background-image: url('../img/testi-tab-1.jpg');
+    }
+
+    &:nth-child(2) {
+      background-image: url('../img/testi-tab-2.jpg');
+    }
+
+    &:nth-child(3) {
+      background-image: url('../img/testi-tab-3.jpg');
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    display: none;
+    transition: all 0.3s ease 0s;
+  }
+}

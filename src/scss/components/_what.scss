@@ -2,48 +2,105 @@
   &__container {
     padding-top: 63px;
     padding-bottom: 88px;
+
+    @media (max-width: $md) {
+      padding-top: 40px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 30px;
+    }
+
+    @media (max-width: $sm) {
+      padding-right: 20px;
+      padding-bottom: 40px;
+      padding-left: 20px;
+    }
   }
 
   &__title-inner {
     text-align: center;
   }
 
-  // слайдер в 2 слайда
+  &__slider {
+    @media (max-width: $md) {
+      position: relative;
+      // max-width: 700px; //tmp
+      overflow: hidden;
+      // margin: 0 auto;
+    }
+
+    @media (max-width: 629px) {
+      max-width: 402px;
+      margin: 0 auto;
+    }
+  }
+
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    margin-top: 65px;
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 65px;
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: center;
+      margin-top: -17px;
+    }
+
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: center;
+      margin-top: -30px;
+    }
   }
 }
 
-.article-item {
+.item-what {
   position: relative;
   width: 274px;
+  cursor: default;
+
+  @media (hover: hover) {
+    &:hover .item-what__icon-inner {
+      background-color: var(--color-dodger-blue);
+    }
+  }
+
+  @media (max-width: $md) {
+    margin-top: 38px;
+    // text-align: center;
+    // padding: 10px;
+    // padding: 0 10px;
+    // width: 234px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
 
   &__title {
     display: inline-block;
     margin-top: 13px;
-    margin-bottom: 14px;
-    margin-left: 53px;
+    margin-bottom: 15px;
+    margin-left: 6px;
     line-height: 24px;
+  }
 
-    @media (min-width: $md) {
-      &:hover a {
-        color: var(--color-tundora);
-      }
-
-      &:hover ~ .article-item__icon-inner {
-        background-color: var(--color-dodger-blue);
-      }
+  &__text {
+    @media (max-width: $md) {
+      // text-align: center;
     }
   }
 
   &__icon-inner {
-    position: absolute;
-    top: 3px;
-    left: 0;
+    // position: absolute;
+    // top: 3px;
+    // left: 0;
     display: inline-block;
     width: 43px;
     height: 43px;
@@ -55,6 +112,7 @@
     transition: background-color 0.3s ease 0s;
 
     @media (max-width: $md) {
+      left: 10px;
       background-color: var(--color-dodger-blue);
     }
   }

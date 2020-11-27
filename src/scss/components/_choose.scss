@@ -13,12 +13,12 @@
   }
 
   &__left {
-    background-image: url('../img/choose-left.jpg');
+    background-image: url('../img/choose-left-bg.jpg');
   }
 
   &__right {
     max-width: 26%;
-    background-image: url('../img/choose-right.jpg');
+    background-image: url('../img/choose-right-bg.jpg');
   }
 }
 
@@ -26,6 +26,11 @@
   max-width: 670px;
   padding: 52px 40px 60px;
   background-color: var(--color-wild-sand);
+
+  @media (max-width: $md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &__title {
     position: relative;
@@ -37,8 +42,8 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
   }
@@ -55,6 +60,13 @@
   padding-bottom: 15px;
   padding-left: 70px;
   margin: 0 auto;
+  cursor: default;
+
+  @media (hover: hover) {
+    &:hover .choose-item__icon-inner .fa {
+      color: var(--color-dodger-blue);
+    }
+  }
 
   &__icon-inner {
     position: absolute;
@@ -70,7 +82,6 @@
 
     .fa {
       color: var(--color-tundora);
-      transition: all 0.2s ease 0s;
 
       @media (max-width: $md) {
         color: var(--color-dodger-blue);
@@ -82,15 +93,5 @@
     margin-bottom: 8px;
     font-family: 'NotoSans', sans-serif;
     font-weight: 700;
-
-    @media (min-width: $md) {
-      &:hover a {
-        color: var(--color-tundora);
-      }
-
-      &:hover ~ .choose-item__icon-inner .fa {
-        color: var(--color-dodger-blue);
-      }
-    }
   }
 }

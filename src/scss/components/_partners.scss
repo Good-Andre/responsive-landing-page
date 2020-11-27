@@ -1,0 +1,34 @@
+.partners {
+  &__container {
+    padding-top: 56px;
+    padding-bottom: 78px;
+
+    @media (max-width: $md) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__list {
+    // display: flex;
+    // flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 42px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 115px;
+    background-color: var(--color-wild-sand);
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0 1px 4px rgba(50, 50, 50, 0.3);
+      }
+    }
+  }
+}

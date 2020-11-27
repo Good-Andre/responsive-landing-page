@@ -13,6 +13,11 @@
     @media (max-width: 992px) {
       flex-direction: column-reverse;
     }
+
+    @media (max-width: $md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__left {
@@ -51,14 +56,14 @@
 
   &__title {
     margin-bottom: 27px;
+
+    @media (max-width: $sm) {
+      text-align: center;
+    }
   }
 
   &__text {
     margin-bottom: 22px;
-  }
-
-  &__list {
-
   }
 }
 

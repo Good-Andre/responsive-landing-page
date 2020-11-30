@@ -14,14 +14,12 @@
     left: 0;
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
-    // z-index: none;
   }
 
   &__container {
     position: relative;
     z-index: 10;
-    padding-top: 65px;
-    padding-bottom: 85px;
+    padding: 65px 20px 85px;
 
     @media (max-width: $lg) {
       max-width: $sm;
@@ -29,23 +27,19 @@
     }
 
     @media (max-width: $md) {
-      padding-top: 55px;
-      padding-bottom: 50px;
+      padding: 55px 20px 50px;
     }
   }
 
   &__title {
     font-family: 'NotoSans', sans-serif;
-    font-size: 24px;
+    font-size: 1.71rem;
     font-weight: 700;
     color: var(--color-white);
     text-transform: uppercase;
-    // z-index: 1000;
   }
 
   &__list {
-    // display: flex;
-    // flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
     margin-top: 100px;
@@ -65,7 +59,6 @@
   &__icon {
     width: 38px;
     padding-top: 3px;
-    // background-color:#999A9C;
     font-size: 34px;
     text-align: center;
   }

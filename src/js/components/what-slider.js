@@ -7,7 +7,7 @@ export const whatSliderInit = () => {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 15,
-    // grabCursor: true,
+    grabCursor: true,
     pagination: {
       el: '.what__pagination',
       clickable: true,

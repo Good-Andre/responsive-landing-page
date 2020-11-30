@@ -33,7 +33,6 @@ export const headerMenuToggle = () => {
       vars.$headerNav.classList.remove('_active');
       vars.$headerBurger.removeEventListener('click', burgerActive);
       vars.$headerNav.removeEventListener('click', menuHide);
-      // убирает скачок к верху страницы при ресайзе при заблоченом скролле
       if (vars.$body.classList.contains('_disable-scroll')) {
         enableScroll();
       }

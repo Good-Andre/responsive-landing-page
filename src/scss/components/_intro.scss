@@ -1,6 +1,5 @@
 .intro {
   position: relative;
-  // width: 100%;
   height: calc(100vh - 63px);
   margin-top: 63px;
   background: url('../img/intro.jpg') center no-repeat;
@@ -20,14 +19,6 @@
     height: 300px;
   }
 
-  // &__img-bg {
-  //   z-index: 1;
-  //   position: absolute;
-  //   object-fit: cover;
-  //   width: 100%;
-  //   height: 100%;
-  // }
-
   &__container {
     display: flex;
     align-items: center;
@@ -37,7 +28,6 @@
 
     @media (max-width: $sm) {
       justify-content: center;
-      // padding: 0;
     }
   }
 
@@ -46,11 +36,7 @@
   }
 
   &__title {
-    // max-width: 640px;
-    // height: 247px;
-    // max-height: 247px;
     margin-bottom: 12px;
-    // overflow-y: auto;
     font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.3;
@@ -59,39 +45,21 @@
     text-shadow: 1px 1px 1px rgb(50, 50, 50);
     transition: all 0.2s ease 0s;
 
-    // @media (max-width: 1412px) {
-    //   height: 176px;
-    //   max-height: 176px;
-    // }
-
-    // @media (max-width: $md) {
-    //   height: 140px;
-    //   max-height: 140px;
-    // }
-
-    // @media (max-width: $sm) {
-    //   height: 113px;
-    //   max-height: 113px;
-    // }
-
     @media (min-width: 1412px) {
       margin-bottom: 22px;
     }
 
     @media (max-width: 1412px) {
-      // max-width: 481px;
       margin-bottom: 42px;
       font-size: 3.43rem;
       line-height: 1.2;
     }
 
     @media (max-width: $md) {
-      // max-width: 380px;
       font-size: 2.7rem;
     }
 
     @media (max-width: $sm) {
-      // max-width: 300px;
       margin-right: 0;
       margin-left: auto;
       font-size: 1.8rem;
@@ -110,7 +78,6 @@
     color: var(--color-dodger-blue);
   }
 
-  // изменить Размеры кнопок на $sm
   &__button-inner {
     text-align: right;
   }

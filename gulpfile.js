@@ -11,7 +11,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const notify = require('gulp-notify');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
-const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fs = require('fs');
 const imagemin = require('gulp-imagemin');
@@ -22,9 +21,6 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminGiflossy = require('imagemin-giflossy');
 const imageminWebp = require('imagemin-webp');
 const htmlmin = require('gulp-htmlmin');
-const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
-const revdel = require('gulp-rev-delete-original');
 const groupMedia = require('gulp-group-css-media-queries');
 const gulpStylelint = require('gulp-stylelint');
 
@@ -63,6 +59,7 @@ const htmlInclude = () => {
     .pipe(browserSync.stream());
 };
 
+// gulp otf2ttf (ВРУЧНУЮ)
 const otf2ttf = () => {
   return src([source_folder + '/fonts/*.otf'])
     .pipe(
@@ -74,7 +71,6 @@ const otf2ttf = () => {
 };
 
 const fonts = () => {
-  src('./src/fonts/**.ttf').pipe(ttf2woff()).pipe(dest('./app/fonts/'));
   return src('./src/fonts/**.ttf')
     .pipe(ttf2woff2())
     .pipe(dest('./app/fonts/'))
@@ -238,7 +234,7 @@ const clean = () => {
   return del(['app/*']);
 };
 
-const htaccessAnd404 = () => {
+const htaccess = () => {
   return src(['./src/.htaccess']).pipe(dest('./app/'));
 };
 
@@ -248,7 +244,7 @@ exports.scripts = scripts;
 exports.watchFiles = watchFiles;
 exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
-exports.htaccessAnd404 = htaccessAnd404;
+exports.htaccess = htaccess;
 
 exports.default = series(
   clean,
@@ -261,7 +257,7 @@ exports.default = series(
     webpToApp
   ),
   styles,
-  htaccessAnd404,
+  htaccess,
   watchFiles
 );
 
@@ -283,7 +279,7 @@ const imgToBuild = () => {
         }),
         imageminMozjpeg({
           progressive: true,
-          quality: 80,
+          quality: 90,
         }),
         imagemin.svgo({
           plugins: [
@@ -375,29 +371,6 @@ const scriptsBuild = () => {
     .pipe(dest('./app/js'));
 };
 
-const cache = () => {
-  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
-    base: 'app',
-  })
-    .pipe(rev())
-    .pipe(revdel())
-    .pipe(dest('app'))
-    .pipe(rev.manifest('rev.json'))
-    .pipe(dest('app'));
-};
-
-const rewrite = () => {
-  const manifest = src('app/rev.json');
-
-  return src('app/**/*.html')
-    .pipe(
-      revRewrite({
-        manifest,
-      })
-    )
-    .pipe(dest('app'));
-};
-
 const htmlMinify = () => {
   return src('app/**/*.html')
     .pipe(
@@ -408,7 +381,6 @@ const htmlMinify = () => {
     .pipe(dest('app'));
 };
 
-exports.cache = series(cache, rewrite);
 exports.imgToBuild = imgToBuild;
 exports.webpToBuild = webpToBuild;
 
@@ -424,7 +396,7 @@ exports.build = series(
     webpToApp
   ),
   stylesBuild,
-  htaccessAnd404,
+  htaccess,
   htmlMinify,
   imgToBuild,
   webpToBuild

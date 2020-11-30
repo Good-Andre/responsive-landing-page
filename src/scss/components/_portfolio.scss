@@ -1,19 +1,14 @@
 .portfolio {
   &__container {
     max-width: 1214px;
-    padding-top: 63px;
-    // padding-bottom: 84px;
-    padding-bottom: 45px;
+    padding: 63px 20px 80px;
 
     @media (min-width: $md) {
       min-height: 547px;
-      // padding-top: 40px;
-      // padding-bottom: 45px;
     }
 
     @media (max-width: $md) {
-      padding-top: 40px;
-      padding-bottom: 53px;
+      padding: 40px 20px 53px;
     }
 
     @media (max-width: $sm) {
@@ -82,12 +77,8 @@
       margin-top: 0;
       margin-bottom: 57px;
     }
-
-    // @media (max-width: $sm) {
-    //   margin-bottom: 60px;
-    // }
   }
-  // Slide-item
+  // Slide
   &__item {
     position: relative;
     width: 292px;

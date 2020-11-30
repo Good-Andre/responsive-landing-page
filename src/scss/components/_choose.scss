@@ -28,8 +28,7 @@
   background-color: var(--color-wild-sand);
 
   @media (max-width: $md) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
   }
 
   &__title {
@@ -42,8 +41,6 @@
   }
 
   &__list {
-    // display: flex;
-    // flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
   }
@@ -56,9 +53,7 @@
 .choose-item {
   position: relative;
   width: 273px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-left: 70px;
+  padding: 0 20px 15px 70px;
   margin: 0 auto;
   cursor: default;
 

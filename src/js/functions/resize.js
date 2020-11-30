@@ -38,10 +38,6 @@ export const resizeContent = (
   }
 };
 
-// filterDesktopInit();
-
-// init slider mibile if width <= 768
-
 resizeContent(
   vars.$portfolioSlider,
   768,

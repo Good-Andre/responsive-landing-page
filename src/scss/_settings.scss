@@ -121,9 +121,9 @@ body {
 ._blue-title {
   margin-left: 15px;
   font-family: 'NotoSans', sans-serif;
-  font-size: 24px;
+  font-size: 1.71rem;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 4.28rem;
   color: var(--color-dodger-blue);
   text-transform: uppercase;
 
@@ -220,6 +220,10 @@ body {
   flex-wrap: wrap;
 }
 
+._active-menu {
+  color: var(--color-dodger-blue);
+}
+
 ._disable-scroll {
   position: fixed;
   top: 0;
@@ -230,6 +234,8 @@ body {
 }
 
 .noscript-info {
+  position: absolute;
+  top: 63px;
   z-index: 100;
   width: 100%;
   padding: 25px;
@@ -237,5 +243,10 @@ body {
   line-height: 2.57rem;
   color: var(--color-black);
   text-align: center;
-  background-color: #fff;
+  background-color: #f5a416;
+
+  a {
+    color: #06c;
+    text-decoration: underline;
+  }
 }

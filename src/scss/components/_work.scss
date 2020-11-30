@@ -5,12 +5,10 @@
   background-size: cover;
 
   &__container {
-    padding-top: 84px;
-    padding-bottom: 84px;
+    padding: 84px 20px;
 
     @media (max-width: $md) {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding: 40px 20px;
     }
 
     @media (max-width: $sm) {
@@ -20,15 +18,11 @@
 
   &__center {
     max-width: 870px;
-    padding-top: 35px;
-    padding-right: 40px;
-    padding-bottom: 44px;
-    padding-left: 40px;
+    padding: 35px 40px 44px;
     background-color: rgba(255, 255, 255, 0.9);
 
     @media (max-width: $sm) {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding: 35px 20px 44px;
     }
   }
 
@@ -43,8 +37,6 @@
   }
 
   &__list {
-    // display: flex;
-    // flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     margin-top: 28px;
@@ -75,11 +67,5 @@
   &__title {
     display: inline-block;
     margin-bottom: 5px;
-
-    // @media (min-width: $md) {
-    //   &:hover a {
-    //     color: var(--color-tundora);
-    //   }
-    // }
   }
 }

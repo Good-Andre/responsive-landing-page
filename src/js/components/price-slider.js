@@ -6,15 +6,14 @@ export const priceSliderInit = () => {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 40,
-    // grabCursor: true,
     pagination: {
       el: '.price__pagination',
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     speed: 400,
     breakpoints: {
       627: {

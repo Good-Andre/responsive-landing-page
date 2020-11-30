@@ -1,6 +1,5 @@
 import Swiper from '../vendor/swiper.min';
 import vars from '../_vars';
-// import {$dataCatReturn} from '../_vars';
 
 export const portfolioSliderInit = () => {
   vars.$dataCat.forEach((item) => {

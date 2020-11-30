@@ -1,7 +1,4 @@
 export default {
-  $window: window,
-  $document: document,
-  $html: document.documentElement,
   $body: document.body,
   $blogSlider: document.querySelector('.blog__slider'),
   $testiSlider: document.querySelector('.testi__slider'),

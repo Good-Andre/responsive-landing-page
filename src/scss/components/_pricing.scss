@@ -1,23 +1,17 @@
 .price {
   &__container {
-    padding-top: 65px;
-    padding-bottom: 95px;
+    padding: 65px 20px 95px;
 
     @media (max-width: $xl + 45px) {
       max-width: $md;
     }
 
     @media (max-width: $md) {
-      padding-top: 40px;
-      padding-right: 40px;
-      padding-bottom: 47px;
-      padding-left: 40px;
+      padding: 40px 40px 47px;
     }
 
     @media (max-width: $sm) {
-      padding-right: 20px;
-      padding-bottom: 38px;
-      padding-left: 20px;
+      padding: 40px 20px 38px;
     }
   }
 
@@ -50,10 +44,6 @@
     @media (max-width: $sm) {
       margin-bottom: 38px;
     }
-
-    // @media (max-width: 627) {
-    //   margin-bottom: 60px;
-    // }
   }
 
   &__pagination {
@@ -63,24 +53,20 @@
       display: flex;
       justify-content: center;
     }
-
-    @media (max-width: $sm) {
-      // margin-top: -17px;
-    }
   }
 }
 
 .card-price {
-  // display: flex;
   position: relative;
   width: 270px;
   text-align: center;
   text-transform: uppercase;
+  user-select: none;
 
   &__title {
     font-family: 'NotoSans', sans-serif;
-    font-size: 18px;
-    line-height: 50px;
+    font-size: 1.28rem;
+    line-height: 3.57rem;
     color: var(--color-white);
     text-shadow: 1px 1px 1px rgb(124, 124, 124);
     background-color: var(--color-mercury);
@@ -130,7 +116,7 @@
     span {
       padding-left: 5px;
       font-family: 'NotoSans', sans-serif;
-      font-size: 30px;
+      font-size: 2.14rem;
       font-weight: 700;
     }
   }
@@ -149,7 +135,7 @@
     }
   }
 
-  @media (hover: hover) {
+  @media (min-width: $md) {
     &:hover .card-price__title {
       color: var(--color-dodger-blue);
       text-shadow: none;
@@ -162,5 +148,3 @@
     }
   }
 }
-
-// 609 breakpoint

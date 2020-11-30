@@ -1,22 +1,18 @@
 .about {
   &__container {
-    padding-top: 118px;
-    padding-bottom: 75px;
+    padding: 118px 20px 75px;
 
     @media (max-width: $md) {
-      padding-top: 65px;
-      padding-bottom: 50px;
+      padding: 65px 20px 50px;
     }
   }
-  // slider $md
+
   &__list {
-    // display: flex;
-    // flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
   }
 }
-// slides $md
+
 .item-about {
   position: relative;
   width: 370px;
@@ -26,7 +22,6 @@
 
   @media (max-width: $sm) {
     width: 320px;
-    // background-color: none;
     background-color: #fff;
   }
 
@@ -58,7 +53,6 @@
   }
 
   &__title {
-    // position: relative;
     display: inline-block;
     padding-bottom: 22px;
   }

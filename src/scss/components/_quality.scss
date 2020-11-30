@@ -7,16 +7,14 @@
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    padding-top: 54px; // fix
-    padding-bottom: 74px;
+    padding: 54px 20px 74px;
 
     @media (max-width: 992px) {
       flex-direction: column-reverse;
     }
 
     @media (max-width: $md) {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding: 40px 20px;
     }
   }
 
@@ -27,15 +25,13 @@
 
     @media (max-width: 992px) {
       margin: 0 auto;
-      // margin-top: 0;
     }
   }
 
   &__right {
     flex: 1 1 auto;
     max-width: 450px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 20px 22px;
 
     @media (max-width: 992px) {
       margin: 0 auto;
@@ -52,8 +48,6 @@
 }
 
 .quality-right {
-  padding-bottom: 22px;
-
   &__title {
     margin-bottom: 27px;
 

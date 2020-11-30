@@ -1,9 +1,5 @@
 .testi {
-  background: linear-gradient(
-    0deg,
-    rgb(244, 244, 244) 0,
-    rgb(255, 255, 255) 100%
-  );
+  background: linear-gradient(0deg, rgb(244, 244, 244) 0, rgb(255, 255, 255) 100%);
 
   @media (max-width: $sm) {
     background: none;
@@ -21,14 +17,13 @@
     }
 
     @media (max-width: $sm) {
-      padding-right: 0;
-      padding-left: 0;
+      padding: 25px 0 0;
     }
   }
 
   &__slider {
     position: relative;
-    max-width: 733px; //tmp
+    max-width: 733px;
     overflow: hidden;
   }
 
@@ -91,14 +86,13 @@
 .slide-left {
   &__speech {
     position: relative;
-    max-width: 428px; //tmp
+    max-width: 428px;
     max-height: 276px;
     padding: 45px 30px 30px;
     margin-top: 47px;
     background-color: #fff;
 
     @media (max-width: 450px) {
-      // color: var(--color-tundora);
       background-color: rgba(255, 255, 255, 0.9);
     }
 
@@ -109,8 +103,7 @@
       z-index: 5;
       max-width: 600px;
       max-height: 200px;
-      padding-right: 40px;
-      padding-left: 40px;
+      padding: 45px 40px 30px;
       color: var(--color-tundora);
       background-color: rgba(255, 255, 255, 0.9);
     }
@@ -138,8 +131,7 @@
     left: 30px;
     width: 67px;
     height: 57px;
-    font-size: 72px;
-    // background-color: #fff;
+    font-size: 5.15rem;
 
     @media (max-width: $sm) {
       left: 45px;
@@ -156,8 +148,7 @@
 }
 
 .left-info {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0;
   margin-right: 26px;
   color: var(--color-dove-gray);
   text-align: right;
@@ -179,19 +170,17 @@
   }
 
   &__status {
-    font-size: 12px;
+    font-size: 0.86rem;
   }
 
   &__company {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
   }
 }
 
 .testi__button {
-  // position: relative; //
-  // z-index: 10; //
   width: 35px;
   height: 35px;
   padding-bottom: 4px;

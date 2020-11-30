@@ -1,10 +1,8 @@
 .footer {
   background-color: var(--color-tundora);
-  // flex: 0 0 auto;
 
   &__container {
-    padding-top: 36px;
-    padding-bottom: 18px;
+    padding: 36px 20px 18px;
   }
 
   &__list {
@@ -75,16 +73,9 @@
     @media (max-width: $sm) {
       margin-left: 0;
     }
-
-    // @media (max-width: $sm) {
-    //   text-align: center;
-    // }
   }
 
   &--4 {
-    // margin: 0 auto;
-    // flex: 1 1 auto;
-
     h3 {
       @media (max-width: $md) {
         text-align: center;
@@ -117,13 +108,10 @@
   &__logo {
     position: relative;
     display: block;
-    // width: 144px;
-    margin-top: 9px;
-    margin-bottom: 17px;
+    margin: 9px 0 17px;
 
     @media (max-width: $md) {
       text-align: center;
-      // margin: 9px auto 17px;
     }
   }
 
@@ -166,7 +154,7 @@
 
   &__title {
     margin-bottom: 26px;
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--color-white);
     text-transform: uppercase;
   }
@@ -179,8 +167,7 @@
 
   &__email {
     position: relative;
-    margin-bottom: 22px;
-    margin-left: 32px;
+    margin: 0 0 22px 32px;
 
     .fa {
       position: absolute;
@@ -218,12 +205,6 @@
     height: 40px;
     padding: 14px;
     background-color: var(--color-silver-chalice);
-
-    // &:focus {
-    //   outline-width: 2px;
-    //   outline-style: solid;
-    //   outline-color: red;
-    // }
   }
 
   &__input-inner {
@@ -240,10 +221,8 @@
     width: 100%;
     min-height: 110px;
     max-height: 200px;
-    padding: 14px;
-    padding-top: 11px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 11px 14px 14px;
+    margin: 10px 0;
     resize: vertical;
     background-color: var(--color-silver-chalice);
   }
@@ -272,7 +251,7 @@
   bottom: 0;
   left: 0;
   z-index: 50;
-  display: none; // flex
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);

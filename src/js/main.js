@@ -6,4 +6,3 @@ import './components/portfolio-filter';
 import './components/form';
 import './components/header-nav';
 import './functions/fix-header-scroll';
-console.log("\nGood-Andre 2020\n\n");

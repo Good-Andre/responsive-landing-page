@@ -1,4 +1,4 @@
-import './_vars';
+// import './_vars';
 import './components/blog-slider';
 import './components/testi-slider';
 import './functions/resize';

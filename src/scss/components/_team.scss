@@ -29,15 +29,15 @@
     }
   }
 
-  &__item {
-    @media (max-width: $sm) {
-      background-color: var(--color-wild-sand);
-    }
+  // &__item {
+  //   @media (max-width: $sm) {
+  //     background-color: var(--color-wild-sand);
+  //   }
 
-    &:last-child {
-      padding-bottom: 40px;
-    }
-  }
+  //   &:last-child {
+  //     padding-bottom: 40px;
+  //   }
+  // }
 }
 
 .team-article {
@@ -53,6 +53,10 @@
 
   @media (max-width: $sm) {
     margin-bottom: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 40px;
   }
 
   &__left {

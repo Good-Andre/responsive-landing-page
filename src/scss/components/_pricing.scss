@@ -70,7 +70,8 @@
     color: var(--color-white);
     text-shadow: 1px 1px 1px rgb(124, 124, 124);
     background-color: var(--color-mercury);
-    transition: all 0.2s ease 0s;
+    transition: color 0.2s ease 0s;
+    transition: background-color 0.2s ease 0s;
 
     &--1 {
       @media (max-width: $md) {
@@ -127,7 +128,7 @@
     line-height: 50px;
     text-transform: inherit;
     background-color: var(--color-mercury);
-    transition: all 0.2s ease 0s;
+    transition: background-color 0.2s ease 0s;
 
     @media (max-width: $md) {
       color: var(--color-white);

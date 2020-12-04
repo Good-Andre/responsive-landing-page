@@ -23,7 +23,7 @@ input::-ms-clear {
 
 a {
   color: var(--color-dove-gray);
-  transition: all 0.2s ease 0s;
+  transition: color 0.2s ease 0s;
 }
 
 a,
@@ -56,7 +56,7 @@ button:focus {
 
 .fa {
   color: var(--color-white);
-  transition: all 0.2s ease 0s;
+  transition: color 0.2s ease 0s;
 }
 
 html {
@@ -95,7 +95,7 @@ body {
   cursor: pointer;
   background: transparent;
   border: none;
-  transition: all 0.2s ease 0s;
+  transition: background 0.2s ease 0s;
 }
 
 ._mid-font {

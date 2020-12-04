@@ -227,7 +227,6 @@
     background-size: cover;
     border: 8px solid #fff;
     opacity: 1;
-    transition: all 0.2s ease 0s;
 
     @media (max-width: 620px) {
       width: 100px;
@@ -249,6 +248,5 @@
 
   .swiper-pagination-bullet-active {
     display: none;
-    transition: all 0.3s ease 0s;
   }
 }

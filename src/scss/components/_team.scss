@@ -11,7 +11,7 @@
     }
   }
 
-  &__list {
+  &__articles {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,16 +28,6 @@
       margin-top: 40px;
     }
   }
-
-  // &__item {
-  //   @media (max-width: $sm) {
-  //     background-color: var(--color-wild-sand);
-  //   }
-
-  //   &:last-child {
-  //     padding-bottom: 40px;
-  //   }
-  // }
 }
 
 .team-article {

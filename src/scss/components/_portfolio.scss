@@ -151,7 +151,7 @@
 
   .fa {
     color: var(--color-dove-gray);
-    transition: all 0.2s ease 0s;
+    transition: color 0.2s ease 0s;
   }
 
   a {
@@ -163,7 +163,8 @@
     text-align: center;
     background-color: #fff;
     border-radius: 100%;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
     transform: scale(2);
 
     @media (hover: hover) {

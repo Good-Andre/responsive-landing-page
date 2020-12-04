@@ -43,7 +43,7 @@
     color: var(--color-white);
     text-align: right;
     text-shadow: 1px 1px 1px rgb(50, 50, 50);
-    transition: all 0.2s ease 0s;
+    transition: font-size 0.2s ease 0s;
 
     @media (min-width: 1412px) {
       margin-bottom: 22px;

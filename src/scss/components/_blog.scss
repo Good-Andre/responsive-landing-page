@@ -76,11 +76,9 @@
 }
 
 .blog-slide {
-  // position: relative;
   display: flex;
   flex-direction: column;
   height: auto;
-  // cursor: grab;
 
   &__image {
     display: block;

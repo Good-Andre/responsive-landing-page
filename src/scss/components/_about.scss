@@ -5,6 +5,10 @@
     @media (max-width: $md) {
       padding: 65px 20px 50px;
     }
+
+    @media (max-width: $sm) {
+      padding-bottom: 35px;
+    }
   }
 
   &__list {
@@ -33,6 +37,10 @@
     height: 70px;
     background-color: var(--color-white);
     border-radius: 100%;
+
+    @media (max-width: $sm) {
+      left: 128px;
+    }
   }
 
   &__icon {
@@ -55,6 +63,17 @@
   &__title {
     display: inline-block;
     padding-bottom: 22px;
+
+    @media (max-width: $sm) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @media (max-width: $sm) {
+      text-align: center;
+    }
   }
 
   @media (hover: hover) {

@@ -34,6 +34,10 @@
   &__title {
     position: relative;
     margin-bottom: 44px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 35px;
+    }
   }
 
   &__text {

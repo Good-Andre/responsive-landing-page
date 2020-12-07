@@ -3,7 +3,7 @@ import vars from '../_vars';
 
 export const whatSliderInit = () => {
 
-  vars.$whatSliderItem = new Swiper(vars.$whatSlider, {
+  vars.whatSliderItem = new Swiper(vars.$whatSlider, {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 15,
@@ -30,6 +30,6 @@ export const whatSliderInit = () => {
 
 export const whatSliderDestroy = () => {
   if (vars.$whatSlider.classList.contains('swiper-container-initialized')) {
-    vars.$whatSliderItem.destroy();
+    vars.whatSliderItem.destroy();
   }
 }

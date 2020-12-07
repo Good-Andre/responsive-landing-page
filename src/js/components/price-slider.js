@@ -2,7 +2,7 @@ import Swiper from '../vendor/swiper.min';
 import vars from '../_vars';
 
 export const priceSliderInit = () => {
-  vars.$priceSliderItem = new Swiper(vars.$priceSlider, {
+  vars.priceSliderItem = new Swiper(vars.$priceSlider, {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 40,
@@ -28,6 +28,6 @@ export const priceSliderInit = () => {
 
 export const priceSliderDestroy = () => {
   if (vars.$priceSlider.classList.contains('swiper-container-initialized')) {
-    vars.$priceSliderItem.destroy();
+    vars.priceSliderItem.destroy();
   }
 }

@@ -33,12 +33,6 @@ function lintCss() {
 }
 exports.lintCss = lintCss;
 
-const resources = () => {
-  return src('./src/resources/**')
-    .pipe(dest('./app'))
-    .pipe(browserSync.stream());
-};
-
 const imgToApp = () => {
   return src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}'])
     .pipe(dest('./app/img'))
@@ -224,7 +218,6 @@ const watchFiles = () => {
   watch('./src/js/**/*.js', scripts);
   watch('./src/html/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
-  watch('./src/resources/**', resources);
   watch('./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}', imgToApp);
   watch('./src/img/**/*.{jpg,JPG,jpeg,png,webp}', webpToApp);
   watch('./src/fonts/**', fonts);
@@ -234,17 +227,12 @@ const clean = () => {
   return del(['app/*']);
 };
 
-const htaccess = () => {
-  return src(['./src/.htaccess']).pipe(dest('./app/'));
-};
-
 exports.fileinclude = htmlInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watchFiles = watchFiles;
 exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
-exports.htaccess = htaccess;
 
 exports.default = series(
   clean,
@@ -252,12 +240,10 @@ exports.default = series(
     htmlInclude,
     scripts,
     fonts,
-    resources,
     imgToApp,
     webpToApp
   ),
   styles,
-  htaccess,
   watchFiles
 );
 
@@ -391,12 +377,10 @@ exports.build = series(
     htmlInclude,
     scriptsBuild,
     fonts,
-    resources,
     imgToApp,
     webpToApp
   ),
   stylesBuild,
-  htaccess,
   htmlMinify,
   imgToBuild,
   webpToBuild

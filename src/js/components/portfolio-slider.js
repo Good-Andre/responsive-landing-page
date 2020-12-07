@@ -6,7 +6,7 @@ export const portfolioSliderInit = () => {
     item.style.display = 'block';
   });
 
-  vars.$portSliderItem = new Swiper(vars.$portfolioSlider, {
+  vars.portSliderItem = new Swiper(vars.$portfolioSlider, {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 2,
@@ -37,6 +37,6 @@ export const portfolioSliderInit = () => {
 
 export const portfolioSliderDestroy = () => {
   if (vars.$portfolioSlider.classList.contains('swiper-container-initialized')) {
-    vars.$portSliderItem.destroy();
+    vars.portSliderItem.destroy();
   }
 }

@@ -6,15 +6,11 @@ export default {
   $filterList: document.querySelector('.portfolio__filter-list'),
   $portfolioSlider: document.querySelector('.portfolio-slider'),
   $priceSlider: document.querySelector('.price__slider'),
-  $priceSliderItem: null,
-  $portSliderItem: null,
   $whatSlider: document.querySelector('.what__slider'),
-  $whatSliderItem: null,
   $footerOverlay: document.querySelector('.footer-overlay'),
   $header: document.querySelector('.header'),
   $anchors: document.querySelectorAll('.nav__link'),
   $headerBurger: document.querySelector('.menu-header__burger'),
   $headerNav: document.querySelector('.menu-header__nav'),
   $headerMenu: document.querySelector('.header__menu'),
-  $resizeFlag: true
 }

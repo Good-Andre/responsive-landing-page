@@ -15,7 +15,7 @@ for (let item of vars.$anchors) {
       left: 0,
       top: topOfElement,
     });
-    history.pushState(null, null, hashVal);
+    history.pushState(null, null, null);
     e.preventDefault();
   });
 }

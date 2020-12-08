@@ -27,8 +27,8 @@ vars.$headerNav.addEventListener('click', menuHide);
 
 export const headerMenuToggle = () => {
   if (window.innerWidth > 768) {
-    // if (vars.$resizeFlag == true) {
-      // vars.$resizeFlag = false;
+    if (vars.$resizeFlag == true) {
+      vars.$resizeFlag = false;
       vars.$headerBurger.classList.remove('_active');
       vars.$headerNav.classList.remove('_active');
       vars.$headerBurger.removeEventListener('click', burgerActive);
@@ -36,12 +36,12 @@ export const headerMenuToggle = () => {
       if (vars.$body.classList.contains('_disable-scroll')) {
         enableScroll();
       }
-    // }
+    }
   } else if (window.innerWidth <= 768) {
-    // if (vars.$resizeFlag == false) {
-      // vars.$resizeFlag = true;
+    if (vars.$resizeFlag == false) {
+      vars.$resizeFlag = true;
       vars.$headerBurger.addEventListener('click', burgerActive);
       vars.$headerNav.addEventListener('click', menuHide);
-    // }
+    }
   }
 }

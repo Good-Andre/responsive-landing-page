@@ -13,4 +13,5 @@ export default {
   $headerBurger: document.querySelector('.menu-header__burger'),
   $headerNav: document.querySelector('.menu-header__nav'),
   $headerMenu: document.querySelector('.header__menu'),
+  $resizeFlag: true
 }
